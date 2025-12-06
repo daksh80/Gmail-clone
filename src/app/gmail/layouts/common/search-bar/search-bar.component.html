@@ -1,0 +1,7 @@
+<div class="search-bar">
+  <div class="search-bar__search-box">
+    <img class="search-bar__menu"[src]="imageFile?.menu" alt="menu" (click)="toggleMenu()"/>
+    <input #searchElement type="text" class="search-bar__input" placeholder={{placeHolderText}} (focus)="onSearchFocus()" (blur)="onSearchBlur()"/>
+    <img class="search-bar__profile-img" [src]="imageFile?.image" alt="profile" (click)="handleProfile()"/>
+  </div>
+</div>

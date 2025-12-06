@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { LandingComponent } from './pages/landing/landing.component';
 import { AuthenticationComponent } from './pages/authentication/authentication.component';
 import { GmailRoutingModule } from './gmail-routing.module';
+import { SearchBarComponent } from './layouts/common/search-bar/search-bar.component';
 
 
 @NgModule({
   declarations: [
     LandingComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    SearchBarComponent
   ],
   imports: [
     CommonModule,
