@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: 'mail', 
-    loadChildren: () => import('./gmail/gmail.module').then(m => m.GmailModule)
+    loadChildren: () => import('../app/gmail/gmail.module').then(m => m.GmailModule)
   },
 ];
 

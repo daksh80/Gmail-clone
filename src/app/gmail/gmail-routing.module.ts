@@ -10,7 +10,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'landing', pathMatch: 'full' },
       { path: 'landing', component: LandingComponent },
-    ],
+    ]
   },
 ];
 
@@ -18,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class GmailRoutingModule {}
+export class GmailRoutingModule { }
