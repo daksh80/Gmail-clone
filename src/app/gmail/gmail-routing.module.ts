@@ -6,7 +6,6 @@ import { SearchBarComponent } from './layouts/common/search-bar/search-bar.compo
 const routes: Routes = [
   {
     path: '',
-    component: SearchBarComponent,
     children: [
       { path: '', redirectTo: 'landing', pathMatch: 'full' },
       { path: 'landing', component: LandingComponent },

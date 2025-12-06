@@ -1,0 +1,136 @@
+.inbox {
+  background-color: #fff;
+
+  &-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 2px 6px;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f8f9fa;
+    }
+
+    &.unread {
+      background-color: #f9fbfd;
+      font-weight: 500;
+    }
+  }
+
+  &__img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #202124;
+  }
+
+  .important {
+    font-size: 12px;
+  }
+
+  &__time {
+    font-size: 12px;
+    color: #5f6368;
+    margin-right: -18px;
+  }
+
+  &__subject {
+    font-size: 13px;
+    font-weight: 500;
+    color: #202124;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__snippet {
+    font-size: 13px;
+    color: #5f6368;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__attachments {
+    display: flex;
+    width: fit-content;
+    gap: 6px;
+    padding: 3px 8px 3px 8px;
+    border: #20212420 1px solid;
+    border-radius: 23px;
+
+    .attachment {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      &__name {
+        color: #282e35;;
+        font-weight: 500;
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  &__badges {
+    display: flex;
+    align-items: center; // Changed this
+    align-self: center; // Added this to center vertically in the row
+    margin-left: 8px;
+    
+    .star {
+      cursor: pointer;
+      font-size: 20px;
+      color: #5f6368;
+      transition: all 0.2s ease;
+      user-select: none;
+
+      &:hover {
+        transform: scale(1.2);
+        color: #f9ab00;
+      }
+
+      &.starred {
+        color: #f9ab00;
+      }
+    }
+  }
+
+  &__empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: #5f6368;
+    font-size: 14px;
+  }
+}

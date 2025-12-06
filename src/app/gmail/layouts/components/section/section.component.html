@@ -1,0 +1,20 @@
+<div class="section">
+    <ng-container *ngFor="let section of emailCategories">
+        <div class="section-item" 
+             *ngIf="section.name !== emailType"
+             (click)="selectSection(section)">
+            <div class="section__icon">
+                <img [src]="section.icon" [alt]="section.name">
+            </div>
+            <div class="section__description">
+                <span class="section__title">{{ section.name }}</span>
+                <span class="section__count">{{ section.description }}</span>
+            </div>
+            <div class="section__badge" *ngIf="section.unreadCount > 0">
+                <span class="section__time" [ngClass]="section.badgeColor">
+                    {{ section.unreadCount > 99 ? '99+' : section.unreadCount }} new
+                </span>
+            </div>
+        </div>
+    </ng-container>
+</div>

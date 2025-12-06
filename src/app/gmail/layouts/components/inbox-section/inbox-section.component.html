@@ -1,0 +1,34 @@
+<div class="inbox">
+    <ng-container *ngFor="let email of inboxSection" >
+        <div class="inbox-item" [class.unread]="email.unread" [class.important]="email.important" (click)="selectSection(email)">
+            <div class="inbox__img">
+                <img [src]="email.from.profilePhoto" [alt]="email.from.name">
+            </div>
+            <div class="inbox__description">
+                <div class="inbox__header">
+                    <span class="inbox__title">{{ email.from.name }}</span>
+                    <span class="inbox__time">{{ email.time }}</span>
+                </div>
+                <span class="important" *ngIf="email.important">Important Files!</span>
+                <span class="inbox__subject">{{ email.subject }}</span>
+                <span class="inbox__snippet">{{ email.snippet }}</span>
+                <div class="inbox__attachments" *ngIf="email.attachments && email.attachments.length > 0">
+                    <div class="attachment" *ngFor="let attachment of email.attachments">
+                        <span class="attachment__name">{{ attachment.fileName }}</span>
+                    </div>
+                </div>
+            </div>
+             <div class="inbox__badges">
+                    <span class="star" 
+                        [class.starred]="email.starred"
+                        (click)="toggleStar($event, email)"
+                        title="Star this email">
+                        {{ email.starred ? '⭐' : '☆' }}
+                    </span>
+                </div>
+        </div>
+    </ng-container>
+    <div class="inbox__empty" *ngIf="!inboxSection || inboxSection.length === 0">
+        <p>No emails to display</p>
+    </div>
+</div>

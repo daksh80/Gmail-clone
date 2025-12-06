@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EMAIL_LIST } from '../../constants/dummy/email-list';
+import { GMAIL_DATA } from '../../constants/dummy/email-list';
 
 @Component({
   selector: 'app-landing',
@@ -7,11 +7,30 @@ import { EMAIL_LIST } from '../../constants/dummy/email-list';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
-  public email = EMAIL_LIST;
-  constructor() { 
-    console.log(JSON.stringify(this.email));
-  }
+  public email = GMAIL_DATA;
+  public emailType: string= '';
+  public sections: any[] = [];
+  public currentEmails: any[] = [];
+  constructor() { }
   ngOnInit(): void {
+    this.handelList('primary')
+    console.log(this.currentEmails);
+  }
+  public handelList(emailType: string) {
+    switch (emailType) {
+      case 'primary':
+        this.emailType = 'Primary';
+        this.currentEmails = this.email.emails.primary;
+        break;
+      case 'social':
+        this.emailType = 'Social';
+        this.currentEmails = this.email.emails.social;
+        break;
+      case 'promotions':
+        this.emailType = 'Promotions';
+        this.currentEmails = this.email.emails.promotions;
+        break;
+    }
   }
 
 }
