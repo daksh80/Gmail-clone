@@ -35,7 +35,7 @@ export const GMAIL_DATA = {
       "firstName": "Bajaj",
       "lastName": "Finserv",
       "fullName": "Bajaj Finserv",
-      "profilePhoto": "https://via.placeholder.com/150/0066CC/FFFFFF?text=BF",
+      "profilePhoto": "https://i.pravatar.cc/150?img=5",
       "company": "Bajaj Finserv"
     },
     {
@@ -53,7 +53,7 @@ export const GMAIL_DATA = {
       "firstName": "Instagram",
       "lastName": "Team",
       "fullName": "Instagram",
-      "profilePhoto": "https://via.placeholder.com/150/E4405F/FFFFFF?text=IG",
+      "profilePhoto": "https://i.pravatar.cc/150?img=5",
       "company": "Meta"
     },
     {
@@ -62,7 +62,7 @@ export const GMAIL_DATA = {
       "firstName": "Facebook",
       "lastName": "Team",
       "fullName": "Facebook",
-      "profilePhoto": "https://via.placeholder.com/150/1877F2/FFFFFF?text=FB",
+      "profilePhoto": "https://i.pravatar.cc/150?img=5",
       "company": "Meta"
     },
     {
@@ -71,7 +71,7 @@ export const GMAIL_DATA = {
       "firstName": "LinkedIn",
       "lastName": "Team",
       "fullName": "LinkedIn",
-      "profilePhoto": "https://via.placeholder.com/150/0A66C2/FFFFFF?text=in",
+      "profilePhoto": "https://i.pravatar.cc/150?img=5",
       "company": "Microsoft"
     },
     {
@@ -80,7 +80,7 @@ export const GMAIL_DATA = {
       "firstName": "Amazon",
       "lastName": "India",
       "fullName": "Amazon India",
-      "profilePhoto": "https://via.placeholder.com/150/FF9900/FFFFFF?text=A",
+      "profilePhoto": "https://i.pravatar.cc/150?img=5",
       "company": "Amazon"
     },
     {
@@ -89,7 +89,7 @@ export const GMAIL_DATA = {
       "firstName": "Myntra",
       "lastName": "Team",
       "fullName": "Myntra",
-      "profilePhoto": "https://via.placeholder.com/150/FF3F6C/FFFFFF?text=M",
+      "profilePhoto": "https://i.pravatar.cc/150?img=5",
       "company": "Myntra"
     },
     {
@@ -98,7 +98,7 @@ export const GMAIL_DATA = {
       "firstName": "Swiggy",
       "lastName": "Team",
       "fullName": "Swiggy",
-      "profilePhoto": "https://via.placeholder.com/150/FC8019/FFFFFF?text=S",
+      "profilePhoto": "hhttps://i.pravatar.cc/150?img=5",
       "company": "Swiggy"
     }
   ],
@@ -148,7 +148,7 @@ export const GMAIL_DATA = {
           "userId": "user3",
           "email": "no-reply@bank.com",
           "name": "Bajaj Finserv",
-          "profilePhoto": "https://via.placeholder.com/150/0066CC/FFFFFF?text=BF"
+          "profilePhoto": "https://i.pravatar.cc/150?img=16"
         },
         "to": [
           {
@@ -217,7 +217,7 @@ export const GMAIL_DATA = {
           "userId": "user5",
           "email": "notifications@instagram.com",
           "name": "Instagram",
-          "profilePhoto": "https://via.placeholder.com/150/E4405F/FFFFFF?text=IG"
+          "profilePhoto": "https://i.pravatar.cc/150?img=13"
         },
         "to": [
           {
@@ -255,7 +255,7 @@ export const GMAIL_DATA = {
           "userId": "user6",
           "email": "updates@facebookmail.com",
           "name": "Facebook",
-          "profilePhoto": "https://via.placeholder.com/150/1877F2/FFFFFF?text=FB"
+          "profilePhoto": "https://i.pravatar.cc/150?img=14"
         },
         "to": [
           {
@@ -301,7 +301,7 @@ export const GMAIL_DATA = {
           "userId": "user7",
           "email": "noreply@linkedin.com",
           "name": "LinkedIn",
-          "profilePhoto": "https://via.placeholder.com/150/0A66C2/FFFFFF?text=in"
+          "profilePhoto": "https://i.pravatar.cc/150?img=9"
         },
         "to": [
           {
@@ -332,7 +332,7 @@ export const GMAIL_DATA = {
           "userId": "user8",
           "email": "offers@amazon.in",
           "name": "Amazon India",
-          "profilePhoto": "https://via.placeholder.com/150/FF9900/FFFFFF?text=A"
+          "profilePhoto": "https://i.pravatar.cc/150?img=10"
         },
         "to": [
           {
@@ -370,7 +370,7 @@ export const GMAIL_DATA = {
           "userId": "user9",
           "email": "sales@myntra.com",
           "name": "Myntra",
-          "profilePhoto": "https://via.placeholder.com/150/FF3F6C/FFFFFF?text=M"
+          "profilePhoto": "https://i.pravatar.cc/150?img=11"
         },
         "to": [
           {
@@ -399,7 +399,7 @@ export const GMAIL_DATA = {
           "userId": "user10",
           "email": "promotions@swiggy.in",
           "name": "Swiggy",
-          "profilePhoto": "https://via.placeholder.com/150/FC8019/FFFFFF?text=S"
+          "profilePhoto": "https://i.pravatar.cc/150?img=12"
         },
         "to": [
           {

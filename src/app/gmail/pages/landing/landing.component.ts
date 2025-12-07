@@ -32,5 +32,12 @@ export class LandingComponent implements OnInit {
         break;
     }
   }
+  public changeSection(selectedEmails: any) {
+    this.currentEmails = selectedEmails;
+  }
+  public selectedEvent(sectionType: any) {
+    this.emailType = sectionType;
+    this.handelList(sectionType);
+  }
 
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { emailCategories } from 'src/app/gmail/constants/dummy/email-list';
 
 @Component({
@@ -9,6 +9,9 @@ import { emailCategories } from 'src/app/gmail/constants/dummy/email-list';
 export class SectionComponent implements OnInit {
   @Input() Emailsections: any;
   @Input() emailType: string = '';
+  @Output() emailSelected = new EventEmitter<any>();
+  @Output() selectedType = new EventEmitter<any>();
+  
   public selectCategory: any;
   public emailCategories = emailCategories;
   constructor() { }
@@ -18,14 +21,20 @@ export class SectionComponent implements OnInit {
     switch (sectionType.folder) {
     case 'social':
       this.selectCategory = this.Emailsections.emails.social;
+      this.emailSelected.emit(this.selectCategory)
+      this.selectedType.emit(sectionType.folder)
       console.log("this.sections",this.selectCategory);
       break;
     case 'promotions':
       this.selectCategory = this.Emailsections.emails.promotions;
+      this.emailSelected.emit(this.selectCategory)
+      this.selectedType.emit(sectionType.folder)
       console.log("this.sections",this.selectCategory);
       break;
     case 'primary':
       this.selectCategory = this.Emailsections.emails.primary;
+      this.emailSelected.emit(this.selectCategory)
+      this.selectedType.emit(sectionType.folder)
       console.log("this.sections",this.selectCategory);
       break;
     default:
