@@ -6,6 +6,9 @@ import { GmailRoutingModule } from './gmail-routing.module';
 import { SearchBarComponent } from './layouts/common/search-bar/search-bar.component';
 import { SectionComponent } from './layouts/components/section/section.component';
 import { InboxSectionComponent } from './layouts/components/inbox-section/inbox-section.component';
+import { MailSectionComponent } from './pages/mail-section/mail-section.component';
+import { Store, StoreModule } from '@ngrx/store';
+import { emailReducer } from './store';
 
 
 @NgModule({
@@ -14,11 +17,13 @@ import { InboxSectionComponent } from './layouts/components/inbox-section/inbox-
     AuthenticationComponent,
     SearchBarComponent,
     SectionComponent,
-    InboxSectionComponent
+    InboxSectionComponent,
+    MailSectionComponent
   ],
   imports: [
     CommonModule,
-    GmailRoutingModule
+    GmailRoutingModule,
+    StoreModule.forFeature('gmail', emailReducer),
   ]
 })
 export class GmailModule { }

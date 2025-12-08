@@ -3,4 +3,4 @@
     <span>{{emailType}}</span>
     <app-section [Emailsections] = "email" [emailType]="emailType" (emailSelected) = "changeSection($event)" (selectedType) = "selectedEvent($event)"></app-section>
 </div>
-<app-inbox-section [inboxSection]="currentEmails"></app-inbox-section>
+<app-inbox-section [inboxSection]="currentEmails" (emailSelected)="selectedSection($event)"></app-inbox-section>

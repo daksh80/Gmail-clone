@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GMAIL_DATA } from '../../constants/dummy/email-list';
+import { Store } from '@ngrx/store';
+import { Router } from '@angular/router';
+import { setSelectedSectionEmails } from '../../store';
 
 @Component({
   selector: 'app-landing',
@@ -11,7 +14,11 @@ export class LandingComponent implements OnInit {
   public emailType: string= '';
   public sections: any[] = [];
   public currentEmails: any[] = [];
-  constructor() { }
+  public selectedSectionEmails: any[] = [];
+  constructor(
+    private _store: Store,
+    private _router: Router
+  ) { }
   ngOnInit(): void {
     this.handelList('primary')
     console.log(this.currentEmails);
@@ -39,5 +46,9 @@ export class LandingComponent implements OnInit {
     this.emailType = sectionType;
     this.handelList(sectionType);
   }
-
+  public selectedSection(selectedEmails: any) {
+    this.selectedSectionEmails = selectedEmails;
+    this._store.dispatch(setSelectedSectionEmails({emails: selectedEmails}));
+    this._router.navigate(['/gmail/mail-section']);
+  }
 }
